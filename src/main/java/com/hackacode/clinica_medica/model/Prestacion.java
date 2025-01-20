@@ -20,6 +20,10 @@ public class Prestacion {
     private double precio;
 
     @ManyToOne
-    @JoinColumn(name = "citaMedica_id", nullable = false)
+    @JoinColumn(name = "id", nullable = false)
     private CitaMedica citaMedica;
+
+    @ManyToOne
+    @JoinColumn(name = "codigo_paquete")
+    private Paquete paquete;
 }
